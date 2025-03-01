@@ -7,7 +7,7 @@ Herkese merhabalar ben Halil Furkan Damar. Bugün sizlere Microsoft Azure üzeri
 
 
 Azure Portal’da arama çubuğuna “App Service” yazarak App Service sayfasına geldikten sonra sol üstte yer alan “Create” butonuna tıklayalım. Açılan seçeneklerden “WordPress on Azure” seçeneğine tıklayalım. Artık oluşturmaya başlayabiliriz.
-![Uploading image.png…]()
+
 
 
 İlk olarak “Basic” sekmesinden başlıyoruz. “Project details” başlığında subscription ve resource group seçmemiz isteniyor. Var olan resource grouplarınızdan birini seçebilirsiniz ya da yeni bir resource group oluşturabilirsiniz.
