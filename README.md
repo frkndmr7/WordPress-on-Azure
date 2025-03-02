@@ -4,6 +4,7 @@ WordPress on Azure
 Herkese merhabalar ben Halil Furkan Damar. Bugün sizlere Microsoft Azure üzerinden WordPress sitesi nasıl oluşturulur bundan bahsedeceğim.
 
 Öncelikle Azure hesabınızın olduğunu varsayarak ilerleyeceğim. Eğer hesabınız yoksa <link> üzerinden kolyalıkla oluşturabilirsiniz. Ben öğrenci mailimle hesap oluşturduğum için Azure for Students aboneliğine sahibim. Bunu belirtmemin sebebini ilerleyen cümlelerde açıklayacağım.
+
 ![Image](https://github.com/user-attachments/assets/fcc4bbe4-4c14-4334-b67b-96d22449a8cf)
 
 
