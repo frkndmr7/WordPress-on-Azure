@@ -1,7 +1,5 @@
-# WordPress-on-Azure
 # WordPress on Azure Setup Guide
 
-![Azure WordPress](https://example.com/path/to/banner.png)
 
 This repository provides a step-by-step guide on how to deploy a WordPress site on Microsoft Azure. Follow these instructions to quickly set up your own WordPress instance in the cloud.
 
@@ -40,6 +38,9 @@ Before you begin, make sure you have:
 1. Select your **Subscription** from the dropdown menu
 2. Choose an existing **Resource Group** or create a new one
 
+![Image](https://github.com/user-attachments/assets/4c6321de-37e6-4500-bf49-c40b63340785)
+
+
 ### Hosting Details
 
 1. Select a **Region** for your server
@@ -51,12 +52,18 @@ Before you begin, make sure you have:
      - Switzerland North
 2. Enter a unique name for your WordPress site
 
+![Image](https://github.com/user-attachments/assets/a07c7213-0d34-4865-98c6-5804fabc365d)
+
+
 ### Hosting Plans
 
 1. Select a hosting plan:
    - **Free**: Limited features but no cost
    - **Basic**: More features with associated costs
    - Note: Student subscriptions only support Free and Basic plans
+
+![Image](https://github.com/user-attachments/assets/96664841-9510-4142-89c5-319d2ecb8c6c)
+
 
 ### WordPress Setup
 
@@ -65,7 +72,8 @@ Before you begin, make sure you have:
    - Password (make sure it's secure)
    - Email address
 
-![Basic Configuration](images/basic-config.png)
+![Image](https://github.com/user-attachments/assets/4fb56f52-a897-449c-a67b-a4a4b144dcd3)
+
 
 ## Step 3: Network and Additional Settings
 
@@ -77,7 +85,6 @@ Before you begin, make sure you have:
 3. Skip the **Deployment** and **Tag** tabs if not needed
 4. Review your configuration and click **Create**
 
-![Networking Configuration](images/networking.png)
 
 ## Step 4: Deployment and Access
 
@@ -86,9 +93,13 @@ Before you begin, make sure you have:
 2. When you see "Your deployment is complete", click **Go to resource**
 3. On the Web App page, click the **Browse** button
    - Alternatively, copy the default domain and paste it in your browser
+     
+![Image](https://github.com/user-attachments/assets/6908b2b6-0ec9-45ba-9fdc-001f9f5adc97)
+
 4. Wait for WordPress installation to finish
 
-![Deployment Complete](images/deployment-complete.png)
+![Image](https://github.com/user-attachments/assets/f93791c5-6d28-488b-9754-27f6adbf9197)
+
 
 ## WordPress Administration
 
