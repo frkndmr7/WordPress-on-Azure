@@ -1,47 +1,128 @@
 # WordPress-on-Azure
+# WordPress on Azure Setup Guide
 
-WordPress on Azure
-Herkese merhabalar ben Halil Furkan Damar. Bugün sizlere Microsoft Azure üzerinden WordPress sitesi nasıl oluşturulur bundan bahsedeceğim.
+![Azure WordPress](https://example.com/path/to/banner.png)
 
-Öncelikle Azure hesabınızın olduğunu varsayarak ilerleyeceğim. Eğer hesabınız yoksa <link> üzerinden kolyalıkla oluşturabilirsiniz. Ben öğrenci mailimle hesap oluşturduğum için Azure for Students aboneliğine sahibim. Bunu belirtmemin sebebini ilerleyen cümlelerde açıklayacağım.
+This repository provides a step-by-step guide on how to deploy a WordPress site on Microsoft Azure. Follow these instructions to quickly set up your own WordPress instance in the cloud.
 
-![Image](https://github.com/user-attachments/assets/fcc4bbe4-4c14-4334-b67b-96d22449a8cf)
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Step 1: Creating the App Service](#step-1-creating-the-app-service)
+- [Step 2: Basic Configuration](#step-2-basic-configuration)
+- [Step 3: Network and Additional Settings](#step-3-network-and-additional-settings)
+- [Step 4: Deployment and Access](#step-4-deployment-and-access)
+- [WordPress Administration](#wordpress-administration)
+- [Special Notes for Student Accounts](#special-notes-for-student-accounts)
+- [Resources](#resources)
+
+## Prerequisites
+
+Before you begin, make sure you have:
+
+- An active Microsoft Azure account
+  - If you don't have one, [create it here](https://portal.azure.com)
+  - Student accounts can use [Azure for Students](https://azure.microsoft.com/en-us/free/students/) for free credits
+
+## Step 1: Creating the App Service
+
+1. Log in to the [Azure Portal](https://portal.azure.com)
+2. In the search bar, type "App Service" and select it from the results
+3. Click the **Create** button in the top left corner
+4. Select **WordPress on Azure** from the options
+
+![App Service Creation](images/app-service-creation.png)
+
+## Step 2: Basic Configuration
+
+### Project Details
+
+1. Select your **Subscription** from the dropdown menu
+2. Choose an existing **Resource Group** or create a new one
+
+### Hosting Details
+
+1. Select a **Region** for your server
+   - For student accounts, only 5 regions are available: 
+     - Germany West Central
+     - France Central
+     - Poland Central
+     - Sweden Central
+     - Switzerland North
+2. Enter a unique name for your WordPress site
+
+### Hosting Plans
+
+1. Select a hosting plan:
+   - **Free**: Limited features but no cost
+   - **Basic**: More features with associated costs
+   - Note: Student subscriptions only support Free and Basic plans
+
+### WordPress Setup
+
+1. Enter your administrator credentials:
+   - Admin username
+   - Password (make sure it's secure)
+   - Email address
+
+![Basic Configuration](images/basic-config.png)
+
+## Step 3: Network and Additional Settings
+
+1. In the **Add-ins** tab, review optional features
+   - These are not required for basic installation
+2. In the **Networking** tab:
+   - Free plan: No virtual network options
+   - Basic plan: Select or create a virtual network
+3. Skip the **Deployment** and **Tag** tabs if not needed
+4. Review your configuration and click **Create**
+
+![Networking Configuration](images/networking.png)
+
+## Step 4: Deployment and Access
+
+1. Wait for the deployment to complete
+   - This may take several minutes
+2. When you see "Your deployment is complete", click **Go to resource**
+3. On the Web App page, click the **Browse** button
+   - Alternatively, copy the default domain and paste it in your browser
+4. Wait for WordPress installation to finish
+
+![Deployment Complete](images/deployment-complete.png)
+
+## WordPress Administration
+
+1. To access the admin panel, add "/wp-admin" to your site URL
+   - Example: `https://your-site-name.azurewebsites.net/wp-admin`
+2. Log in using the credentials you created during setup
+3. You can now customize your site, add content, install plugins, etc.
+
+![WordPress Admin](images/wp-admin.png)
+
+## Special Notes for Student Accounts
+
+If you're using an Azure for Students subscription:
+
+- You're limited to the Free and Basic hosting plans
+- You can only deploy in 5 specific regions (listed above)
+- Resource quotas may be limited compared to paid subscriptions
 
 
-Azure Portal’da arama çubuğuna “App Service” yazarak App Service sayfasına geldikten sonra sol üstte yer alan “Create” butonuna tıklayalım. Açılan seçeneklerden “WordPress on Azure” seçeneğine tıklayalım. Artık oluşturmaya başlayabiliriz.
+
+## Resources
+
+- [Azure Portal](https://portal.azure.com)
+- [WordPress Documentation](https://wordpress.org/documentation/)
+- [Azure App Service Documentation](https://docs.microsoft.com/en-us/azure/app-service/)
+- [Azure for Students FAQ](https://azure.microsoft.com/en-us/free/students/faq/)
+
+---
+
+Created by Halil Furkan Damar
+
+Feel free to contribute to this guide by creating pull requests or opening issues!
 
 
 
-İlk olarak “Basic” sekmesinden başlıyoruz. “Project details” başlığında subscription ve resource group seçmemiz isteniyor. Var olan resource grouplarınızdan birini seçebilirsiniz ya da yeni bir resource group oluşturabilirsiniz.
 
 
-“Hosting details” başlığında sunucunun region’ını ve sitenizin ismini belirlemeniz isteniyor. Burda dikkat edilmesi gereken konu öğrenci hesaplarında kullanılabilen region sayısı sadece 5. Bunlar Germany West Central, France Central, Poland Central, Sweden Central ve Switzerland North regionları.
-
-
-“Hosting plans” başlığında uygulamamızın hangi planı kullanacağını seçiyoruz. Hosting planınız, App Service Planınızı, Veritabanı SKU’nuzu ve diğer kullanılabilir özellikleri belirler. Öğrenci aboneliği sadece Free ve Basic planı destekliyor. Siz kullanım durumunuza göre ikisinden birini seçebilirsiniz.
-
-
-“WordPress setup” başlığında WordPress’e girişte kullanacağınız bilgileri doldurmanız gerekiyor.
-
-
-Bundan sonra next butonuna tıklayarak “Add-ins” sekmesine geçiyoruz. Burdaki özellikleri inceleyebilirsiniz ancak kurulum için şart olmadığından boş bırakarak “Networking” sekmesine geçiyoruz. Eğer hosting planınızı free olarak seçtiyseniz burda virtual network seçtirmiyor zaten. Basic olarak seçtiyseniz var olan virtual networklerinizden birini seçerek ya da yeni bir virtual network oluşturarak devam ediyoruz.
-
-“Deployment” ve “Tag” sekmelerini de zorunluluk içermediği için geçerek “Review + Create” aşamasına geliyoruz. Create diyerek artık süreci tamamlıyoruz. Deployment işlemi biraz vakit alabilir merak etmeyin 🙂
-
-“Your deployment is complete” yazısını gördükten sonra ekrandaki “Go to resource” butonuna tıklayarak portaldaki Web App sayfasına yönlendiriliyoruz.
-
-
-Bu sayfadaki “Browse” butonuna basarak veya default domaini kopyalayıp tarayıcıda açarak WordPress sayfamıza ulaşabiliriz. Ancak önce installing yapmasını beklemeliyiz.
-
-
-Sonrasında sayfa karşınıza çıkacak. Site içeriğinde düzenleme yapmak için admin sayfasına gitmemiz gerekli. Bu yüzden site urlsinin sonuna “/wp-admin” ekleyerek admin sayfasına gidiyoruz.
-
-
-Karşınıza çıkan ekranda oluşturma sürecindeki “WordPress setup” başlığında belirlediğimiz kullanıcı adı ve parolayı girerek admin sayfasına ulaşıyoruz.
-
-
-Evet artık burdan sonrasında sitenizi istediğiniz içeriklerle doldurabilirsiniz ve belirlediğiniz domain ile ulaşabilirsiniz.
-
-Yazımı bitirirken vurgulamakta fayda gördüğüm bir kısım var. Bu yazının amacı Azure Portal üzerinden WordPress sitesi nasıl oluşturulur ve konfigüre edilir onu göstermektir. Oluşturma sürecindeki bilmediğiniz kavramlar ya da atladığımız adımlar doğrudan yazının amacına hizmet etmediği için detaylandırma yapılmamıştır. Bunu gözeterek değerlendirmenizi rica ediyorum.
-
-Okuduğunuz için çok teşekkür ederim umarım faydalı olmuştur.
